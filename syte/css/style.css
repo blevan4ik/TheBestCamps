@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap');
+
+
+
+body::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #aaae7f;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #243E36;    /* цвет плашки */
+  border-radius: 10px;       /* закругления плашки */
+  border: 1px solid #F7F7F7;  /* padding вокруг плашки */
+}
+
+
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  background-color: #F7F7F7 ;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.wrapper{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.camp_list{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header{
+  font-family: 'Comfortaa';
+
+  width: 100%;
+  height: 70px;
+  margin: 0 0 30px 0;
+  padding: 0 20px;
+  background-color: #aaae7f  ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.picture_logo{
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  margin: 10px;
+  position: relative;
+  top: 15px;
+  border: 1px solid black;
+  background-image: url(/FavIcon/logo.ico);
+  backdrop-filter: brightness(150%);
+  background-color: #243e366e;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 6px 32px 2px rgba(34, 60, 80, 0.692);
+  
+
+}
+
+.olimp_picture{
+  transform: translateY(-60px);
+}
+.description_logo{
+  position: relative;
+  top: 10px;
+}
+
+.logo{
+  margin: 0 auto;
+  position: relative;
+  top: 7px;
+  
+  transform: translate(-190px);
+
+  width: 300px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 0 0 30px 30px;
+  background-color: #243E36;
+  text-align: center;
+  color: wheat;
+
+  font-family: 'Comfortaa';
+
+}
+
+
+.Sign_up{
+  align-items: flex-end;
+  width: 80px;
+  height: 80px;
+  background-color: #243E36;
+  align-items: flex-end;
+  border-radius: 30%;
+
+}
+
+.camp_list{
+  margin: 100px auto;
+  width: 90%;
+  padding: 70px;
+  border-radius: 30px;
+  background-color: rgba(33, 31, 31, 0.423);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.camp_block{
+   width: 400px;
+   height: 570px;
+   background-color: #243E36;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   border-radius: 20px;
+   color: wheat;
+}
+
+.camp_block:hover{
+  transform: scale(1.07);
+}
+
+.hat_camp{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.489);
+  width: 115%;
+  padding: 5px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Comfortaa';
+
+}
+
+
+.picture_camp {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  margin: 20px 0;
+  background-size: cover;
+}
+
+.picture_camp img{
+  position: relative;
+  bottom: 40px;
+}
+
+.discription_contener_camp{
+  padding: 10px;
+
+  height: 80%;
+  width: 100%;
+}
+
+.discription_end_camp{
+  height: 30%;
+  display: flex;
+  align-items: flex-end ;
+  justify-content: space-between;
+  margin: 0 auto;
+  
+}
+
+.discription_camp{
+  height: 200px;
+  font-size: 20px;
+}
+
+.reviews_camp{
+  background-image: url(/img/f63087b0-29f8-4e51-9700-8e278afb9763.png);
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  background-color:#aaae7f;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  color: rgba(245, 222, 179, 0);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  top: 5px;
+}
+
+.reviews_camp span{
+  position: relative;
+  right: 7px;
+
+  
+  font-weight:800;
+  text-shadow: 0px 0px 18px rgba(0, 0, 0, 0);
+  font-size: 0px;
+}
+
+.reviews_camp:hover{
+  width: 110px;
+  height:  auto;
+  background-size: 0px 0px;
+  color: rgba(255, 255, 255, 0.997);
+}
+
+.reviews_camp:hover span{
+  text-shadow: 0px 0px 18px rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 20px;
+  
+}
+
+
+.register_camp{
+  font-size: 20px;
+  padding: 10px;  
+  background: linear-gradient(90deg, rgba(40,121,96,1) 6%, rgba(209,170,116,1) 78%);
+  color: rgb(230, 219, 219);
+  border-radius: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
+
+}
+
+.register_camp:hover{
+  transform: scale(1.1);
+}
+
+@media(max-width: 1600px){
+  .camp_list{
+    display: flex;
+    justify-content: space-between;
+    height: 1900px;
+    flex-direction: column;
+  }  
+
+  .main_block{
+    width: 100%;
+    height: 1900px;
+  }
+
+  .logo{
+    transform: translate(0);
+  }
+}
+
+
+@media (max-width: 900px){
+
+  .description_logo{
+    position: absolute;
+    color: #00000000;
+  }
+  .camp_list{
+    flex-direction: column;
+    background-color: #243e3600;
+    height: 2400px;
+  }
+
+  .header{
+    height: 50px;
+  }
+
+  .logo{
+    margin: 0 0 ;
+    width: 270px;
+    height: 90px;
+    font-size: 26px;
+  }
+
+  .Sign_up{
+    width: 70px;
+    height: 70px;
+  }
+
+  .camp_block{
+    width: 300px;
+    height:700px;
+  }
+
+  .olimp_picture{
+    transform: translateY(0px);
+  }
+
+  .discription_camp{
+    height: 250px;
+    font-size: 20px;
+  }
+
+  .discription_end_camp{
+    width: 300px;
+
+  }
+
+}
